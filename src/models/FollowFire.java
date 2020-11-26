@@ -23,7 +23,7 @@ public class FollowFire implements FireInterface{
         }
         fire.setX(fire.getNav().getX() + fire.getWidth() + 5);
         if(fire.isVisible()){
-            graphcs2D.setColor(new Color(25, 125, 25));
+            graphcs2D.setColor(new Color(250, 25, 0));
             graphcs2D.fillRect(fire.getX() , fire.getY(), fire.getWidth(), fire.getHeight());
         }
     }

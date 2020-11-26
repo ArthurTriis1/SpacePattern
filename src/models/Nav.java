@@ -27,6 +27,7 @@ public class Nav {
         if(x + dx > 10 && x + dx < 440) x = x + dx; 
     }
     
+    //Função responvale por aplicação do padrão Strategy
     public void simpleFire(){
         if(this.followFire){
             this.fires.add(new Fire(this, new FollowFire()));
@@ -70,7 +71,7 @@ public class Nav {
             }
         });
         
-        graphs.setColor(new Color(125, 25, 25));
+        graphs.setColor(new Color(205, 205, 0));
         this.renderLine(2, 0, 2, graphs);
         this.renderLine(0, 1, 6, graphs);
         this.renderLine(1, 2, 4, graphs);

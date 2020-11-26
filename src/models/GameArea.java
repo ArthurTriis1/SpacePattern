@@ -31,6 +31,7 @@ public class GameArea extends JPanel implements ActionListener{
         
     }
     
+    @Override
     public void paint(Graphics g){
         Graphics2D graphs = (Graphics2D) g;
         graphs.setColor(new Color(25, 25, 112));
