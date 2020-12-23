@@ -1,19 +1,22 @@
-package models;
+package models.fire;
 
 import interfaces.FireInterface;
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
+import models.Nav;
 
 /**
- *
- * @author arthu
+ * Clase base para implementação do STRATEGY no Fire,
+ * ela é composta por diferentes tipos de tiros que são por Classes
+ * que implementam a FireInterface
  */
 public class Fire {
     private int x, y, height = 15, width = 6;
     
     private boolean isVisible;
     private Nav nav;
-    private static int SPEED = 2;
+    private static int SPEED = 10;
     private FireInterface fireInterface;
    
     public Fire(Nav nav, FireInterface fireInterface){
@@ -31,6 +34,10 @@ public class Fire {
 
     public void setX(int x) {
         this.x = x;
+    }
+    
+    public Rectangle getBounds(){
+        return new Rectangle(x,y,width,height);   
     }
     
 
